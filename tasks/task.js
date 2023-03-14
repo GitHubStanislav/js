@@ -11,6 +11,6 @@ function flat(n) {
             res.push(item)
         }
     })
-    return res
+    return res.reduce((a, c) => a + c)
 }
-console.log(flat(arr).reduce((a, c) => a + c))
+console.log(flat(arr))
