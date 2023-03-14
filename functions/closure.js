@@ -8,9 +8,9 @@ function outer() {
   };
 }
 
-const resault = outer();
-const resault2 = resault();
-console.log(resault2);
+const res = outer();
+const res2 = res();
+console.log(res2);
 
 // ******************
 
