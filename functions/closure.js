@@ -1,11 +1,11 @@
 // closure
 
 function outer() {
-  let a = 10;
-  return function inner() {
-    let sum = a + 10;
-    return sum;
-  };
+    let a = 10;
+    return function inner() {
+        let sum = a + 10;
+        return sum;
+    };
 }
 
 const res = outer();
@@ -15,7 +15,7 @@ console.log(res2);
 // ******************
 
 const createPrase = (world) => {
-  return (world2) => `Hello ${world} ${world2}`;
+    return (world2) => `Hello ${world} ${world2}`;
 };
 
 const say = createPrase("Mike");
@@ -26,10 +26,12 @@ console.log(say2);
 
 // pure function
 function add(a, b) {
-  return a + b;
+    return a + b;
 }
+
 // not pure function
 let a = 1;
+
 function add1(b) {
-  a += b;
+    a += b;
 }

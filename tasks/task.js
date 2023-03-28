@@ -14,3 +14,4 @@ function flat(n) {
     return res.reduce((a, c) => a + c)
 }
 console.log(flat(arr))
+
