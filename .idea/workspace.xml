@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="798d1620-4c1f-4e2b-a1dd-d46b0e5ee8c5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/closure.js" beforeDir="false" afterPath="$PROJECT_DIR$/functions/closure.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tasks/task.js" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/task.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,16 +36,18 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/Users/Стас/Desktop/js",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\Стас\\AppData\\Roaming\\npm\\node_modules\\prettier",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Node.js.methods.js">
+  <component name="RunManager" selected="Node.js.task.js">
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/js/DOM/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -64,9 +65,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.task.js" />
         <item itemvalue="Node.js.methods.js" />
         <item itemvalue="Node.js.closure.js" />
-        <item itemvalue="Node.js.task.js" />
         <item itemvalue="Node.js.array.js" />
         <item itemvalue="JavaScript Debug.index.html" />
       </list>
@@ -88,7 +89,11 @@
       <workItem from="1678725707245" duration="224000" />
       <workItem from="1678782087153" duration="1579000" />
       <workItem from="1678790892378" duration="127000" />
-      <workItem from="1680017900898" duration="2120000" />
+      <workItem from="1680017900898" duration="2121000" />
+      <workItem from="1680096292573" duration="304000" />
+      <workItem from="1680096694583" duration="670000" />
+      <workItem from="1681029126776" duration="2137000" />
+      <workItem from="1681474316420" duration="420000" />
     </task>
     <servers />
   </component>
