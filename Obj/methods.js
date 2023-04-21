@@ -16,7 +16,6 @@ const obj = Object.entries(obj1)
 const createPhrase = (greeting) => {
   return (name) => `${greeting} ${name}`;
 };
-
 const sayHi = createPhrase("Hello");
 console.log(sayHi("Stas"));
 
@@ -28,24 +27,24 @@ const arr1 = arr.reduce(function (sum, elem) {
 });
 console.log(arr1);
 
-// знайти сумму всіх позитивних елементів
+// знайти суму всіх позитивних елементів
 
 const listOfNumber = [1, 2, 3, -5, -2];
-const resault = listOfNumber.reduce((sum, elem) => {
+const result = listOfNumber.reduce((sum, elem) => {
   if (elem > 0) {
     return sum + elem;
   } else {
     return sum;
   }
 });
-console.log(resault);
+console.log(result);
 
 // map
 const arr2 = [1, 2, 3, 4, 5];
-const arrResault = arr2.map((el) => {
+const arrResult = arr2.map((el) => {
   return el * 2;
 });
-console.log(arrResault);
+console.log(arrResult);
 
 // reverse string map
 const string = "Hello";

@@ -14,11 +14,11 @@ console.log(res2);
 
 // ******************
 
-const createPrase = (world) => {
+const createPhrase = (world) => {
     return (world2) => `Hello ${world} ${world2}`;
 };
 
-const say = createPrase("Mike");
+const say = createPhrase("Mike");
 const say2 = say("Smith");
 
 console.log(say2);
