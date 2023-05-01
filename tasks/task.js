@@ -1,5 +1,4 @@
-const arr = [1, 2, 3, [1, 23, 4], [1, [2, 3, 4]], 5];
-
+const arr = [1, 2, 3, [1, 23, 4], [1, [2, 3, 4]], 5,1];
 function flat(n) {
   let res = [];
   n.forEach((item) => {
@@ -27,3 +26,4 @@ function findSum(...num) {
 }
 const arr1 = [1,2,3]
 console.log(findSum(...arr1));
+
