@@ -30,7 +30,7 @@ class Person {
 const user = new Person("Stas", 35);
 console.log(user.age);
 user.age = 36;
-
+//***************************************
 const product = {
   // title:'Apple',
   desc:'',
@@ -55,3 +55,22 @@ const product = {
 product.title = 'TV'
 
 console.log(product.title)
+//**********************************************
+let user1 = {
+  name: "John",
+  surname: "Smith",
+
+  get fullName() {
+    return `${this.name} ${this.surname}`;
+  },
+
+  set fullName(value) {
+    [this.name, this.surname] = value.split(" ");
+  }
+};
+
+// set fullName запустится с данным значением
+user.fullName = "Alice Cooper";
+
+alert(user1.name); // Alice
+alert(user1.surname); // Cooper
