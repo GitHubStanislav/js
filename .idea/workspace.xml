@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="798d1620-4c1f-4e2b-a1dd-d46b0e5ee8c5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Obj/methods.js" beforeDir="false" afterPath="$PROJECT_DIR$/Obj/methods.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/closure.js" beforeDir="false" afterPath="$PROJECT_DIR$/functions/closure.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Array/methods.js" beforeDir="false" afterPath="$PROJECT_DIR$/Array/methods.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OOP/get-Set.js" beforeDir="false" afterPath="$PROJECT_DIR$/OOP/get-Set.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tasks/task.js" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/task.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,6 +27,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2MJl8kFg5NsLm4xVBru5dSCgYVL" />
   <component name="ProjectViewState">
@@ -50,10 +53,10 @@
   }
 }]]></component>
   <component name="RunManager" selected="Node.js.task.js">
-    <configuration name="array.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/destruction/array.js" working-dir="$PROJECT_DIR$/destruction">
+    <configuration name="FindSumArr.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/tasks/FindSumArr.js" working-dir="$PROJECT_DIR$/tasks">
       <method v="2" />
     </configuration>
-    <configuration name="closure.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/functions/closure.js" working-dir="$PROJECT_DIR$/functions">
+    <configuration name="get-Set.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/OOP/get-Set.js" working-dir="$PROJECT_DIR$/OOP">
       <method v="2" />
     </configuration>
     <configuration name="methods.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Array/methods.js" working-dir="$PROJECT_DIR$/Array">
@@ -68,10 +71,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Node.js.task.js" />
-        <item itemvalue="Node.js.objCopy.js" />
+        <item itemvalue="Node.js.get-Set.js" />
         <item itemvalue="Node.js.methods.js" />
-        <item itemvalue="Node.js.closure.js" />
-        <item itemvalue="Node.js.array.js" />
+        <item itemvalue="Node.js.FindSumArr.js" />
+        <item itemvalue="Node.js.objCopy.js" />
       </list>
     </recent_temporary>
   </component>
@@ -98,6 +101,8 @@
       <workItem from="1681474316420" duration="1008000" />
       <workItem from="1681720000514" duration="2603000" />
       <workItem from="1682075803415" duration="1642000" />
+      <workItem from="1682945158603" duration="6558000" />
+      <workItem from="1683020557329" duration="3014000" />
     </task>
     <servers />
   </component>

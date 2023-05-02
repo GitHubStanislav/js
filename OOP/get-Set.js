@@ -30,3 +30,28 @@ class Person {
 const user = new Person("Stas", 35);
 console.log(user.age);
 user.age = 36;
+
+const product = {
+  // title:'Apple',
+  desc:'',
+  price: 2000,
+  deliveryPrice: 200,
+  getPrice(){
+    return this.price
+  },
+
+  set title (value) {
+    if (value !== '') {
+      this.hiddenTitle = value
+    } else {
+      this.hiddenTitle = 'default'
+    }
+  },
+  get title (){
+    return this.hiddenTitle
+  },
+}
+
+product.title = 'TV'
+
+console.log(product.title)

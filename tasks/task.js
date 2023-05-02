@@ -1,4 +1,4 @@
-const arr = [1, 2, 3, [1, 23, 4], [1, [2, 3, 4]], 5,1];
+const arr = [1, 2, 3, [1, 23, 4], [1, [2, 3, 4]], 5, 1];
 function flat(n) {
   let res = [];
   n.forEach((item) => {
@@ -18,12 +18,19 @@ console.log(sum(2, 4));
 
 // sum element
 function findSum(...num) {
-  let accum =0;
+  let accum = 0;
   num.forEach((num) => {
     accum += num;
   });
   return accum;
 }
-const arr1 = [1,2,3]
+const arr1 = [1, 2, 3];
 console.log(findSum(...arr1));
 
+// find not odd numbers
+function noOdds (values) {
+  return values.filter((num) => num % 2 === 0);
+
+}
+
+console.log(noOdds(arr))
