@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="798d1620-4c1f-4e2b-a1dd-d46b0e5ee8c5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/OOP/get-Set.js" beforeDir="false" afterPath="$PROJECT_DIR$/OOP/get-Set.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +49,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Node.js.task.js">
+  <component name="RunManager" selected="Node.js.proto.js">
     <configuration name="FindSumArr.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/tasks/FindSumArr.js" working-dir="$PROJECT_DIR$/tasks">
       <method v="2" />
     </configuration>
@@ -59,7 +59,7 @@
     <configuration name="methods.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Array/methods.js" working-dir="$PROJECT_DIR$/Array">
       <method v="2" />
     </configuration>
-    <configuration name="objCopy.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Obj/objCopy.js" working-dir="$PROJECT_DIR$/Obj">
+    <configuration name="proto.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/OOP/proto.js" working-dir="$PROJECT_DIR$/OOP">
       <method v="2" />
     </configuration>
     <configuration name="task.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/tasks/task.js" working-dir="$PROJECT_DIR$/tasks">
@@ -67,11 +67,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.proto.js" />
         <item itemvalue="Node.js.task.js" />
         <item itemvalue="Node.js.get-Set.js" />
         <item itemvalue="Node.js.methods.js" />
         <item itemvalue="Node.js.FindSumArr.js" />
-        <item itemvalue="Node.js.objCopy.js" />
       </list>
     </recent_temporary>
   </component>
@@ -99,7 +99,8 @@
       <workItem from="1681720000514" duration="2603000" />
       <workItem from="1682075803415" duration="1642000" />
       <workItem from="1682945158603" duration="6558000" />
-      <workItem from="1683020557329" duration="3879000" />
+      <workItem from="1683020557329" duration="4467000" />
+      <workItem from="1684059639475" duration="2859000" />
     </task>
     <servers />
   </component>
