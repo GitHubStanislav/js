@@ -74,3 +74,4 @@ user.fullName = "Alice Cooper";
 
 alert(user1.name); // Alice
 alert(user1.surname); // Cooper
+
