@@ -207,3 +207,4 @@ const [value, showValue] = array;
 // alert(showValue()); // виведе 'showValue'
 console.log(value);
 console.log(showValue());
+
