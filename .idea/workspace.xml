@@ -15,8 +15,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -51,14 +51,14 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JavaScript Debug.TryCatch.html">
+  <component name="RunManager" selected="Node.js.Destructuring.js">
     <configuration name="TryCatch.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/js/promise/TryCatch.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="get-Set.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/OOP/get-Set.js" working-dir="$PROJECT_DIR$/OOP">
+    <configuration name="Destructuring.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/destruction/Destructuring.js" working-dir="$PROJECT_DIR$/destruction">
       <method v="2" />
     </configuration>
-    <configuration name="methods.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Array/methods.js" working-dir="$PROJECT_DIR$/Array">
+    <configuration name="get-Set.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/OOP/get-Set.js" working-dir="$PROJECT_DIR$/OOP">
       <method v="2" />
     </configuration>
     <configuration name="proto.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/OOP/proto.js" working-dir="$PROJECT_DIR$/OOP">
@@ -69,11 +69,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.Destructuring.js" />
         <item itemvalue="JavaScript Debug.TryCatch.html" />
         <item itemvalue="Node.js.get-Set.js" />
         <item itemvalue="Node.js.proto.js" />
         <item itemvalue="Node.js.task.js" />
-        <item itemvalue="Node.js.methods.js" />
       </list>
     </recent_temporary>
   </component>
@@ -103,7 +103,7 @@
       <workItem from="1682945158603" duration="6558000" />
       <workItem from="1683020557329" duration="4467000" />
       <workItem from="1684059639475" duration="5009000" />
-      <workItem from="1684664581715" duration="3146000" />
+      <workItem from="1684664581715" duration="5606000" />
     </task>
     <servers />
   </component>
