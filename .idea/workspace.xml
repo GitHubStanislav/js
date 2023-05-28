@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="798d1620-4c1f-4e2b-a1dd-d46b0e5ee8c5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/destruction/Destructuring.js" beforeDir="false" afterPath="$PROJECT_DIR$/destruction/Destructuring.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,8 +51,14 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Node.js.Destructuring.js">
+  <component name="RunManager" selected="JavaScript Debug.AJAX.html">
+    <configuration name="AJAX.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/js/AJAX/AJAX.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="TryCatch.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/js/promise/TryCatch.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="AJAX.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/AJAX/AJAX.js" working-dir="$PROJECT_DIR$/AJAX">
       <method v="2" />
     </configuration>
     <configuration name="Destructuring.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/destruction/Destructuring.js" working-dir="$PROJECT_DIR$/destruction">
@@ -62,19 +67,13 @@
     <configuration name="get-Set.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/OOP/get-Set.js" working-dir="$PROJECT_DIR$/OOP">
       <method v="2" />
     </configuration>
-    <configuration name="proto.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/OOP/proto.js" working-dir="$PROJECT_DIR$/OOP">
-      <method v="2" />
-    </configuration>
-    <configuration name="task.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/tasks/task.js" working-dir="$PROJECT_DIR$/tasks">
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.AJAX.html" />
+        <item itemvalue="Node.js.AJAX.js" />
         <item itemvalue="Node.js.Destructuring.js" />
         <item itemvalue="JavaScript Debug.TryCatch.html" />
         <item itemvalue="Node.js.get-Set.js" />
-        <item itemvalue="Node.js.proto.js" />
-        <item itemvalue="Node.js.task.js" />
       </list>
     </recent_temporary>
   </component>
@@ -104,7 +103,8 @@
       <workItem from="1682945158603" duration="6558000" />
       <workItem from="1683020557329" duration="4467000" />
       <workItem from="1684059639475" duration="5009000" />
-      <workItem from="1684664581715" duration="8675000" />
+      <workItem from="1684664581715" duration="8705000" />
+      <workItem from="1685269549665" duration="14122000" />
     </task>
     <servers />
   </component>
