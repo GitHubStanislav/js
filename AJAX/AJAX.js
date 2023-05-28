@@ -147,6 +147,6 @@ fetch(filmsEndpoint)
           })
           .catch((error) => console.log("Error fetching characters:", error));
       });
-    }, 2000);
+    }, 3000);
   })
   .catch((error) => console.log("Error fetching films:", error));
