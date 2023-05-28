@@ -25,12 +25,10 @@
 
 const body = document.body;
 
-// Create filmsList element
 const filmsList = document.createElement("div");
 filmsList.id = "films-list";
 body.appendChild(filmsList);
 
-// Create styles using JavaScript
 const styles = document.createElement("style");
 styles.innerHTML = `
 body {
@@ -99,9 +97,10 @@ filmsList.innerHTML = `
   <div class="star-wars">
     <div class="crawl">
       <div class="title">
-        <h1>A long time ago, in a galaxy far, far away...
-It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory
-against the evil Galactic Empire.....</h1>
+        <h1>Давно, далеко-далеко...
+          Це період громадянської війни.
+          Військові кораблі повстанців, атакуючи з таємної бази, здобули першу перемогу
+          над зловісною Галактичною імперією....</h1>
       </div>
       <p></p>
     </div>
@@ -113,11 +112,10 @@ const filmsEndpoint = "https://ajax.test-danit.com/api/swapi/films";
 fetch(filmsEndpoint)
   .then((response) => response.json())
   .then((data) => {
-    // Remove Star Wars animation after 5 seconds
+    // Remove Star Wars animation after 3 seconds
     setTimeout(() => {
       styles.innerHTML = `body {
-  background: #ffffff;
-}`;
+  background: #ffffff; }`;
       filmsList.innerHTML = ``;
 
       // Display the list of films
@@ -153,6 +151,6 @@ fetch(filmsEndpoint)
           })
           .catch((error) => console.log("Error fetching characters:", error));
       });
-    }, 3000); // Wait for 5 seconds before removing the animation
+    }, 4000);
   })
   .catch((error) => console.log("Error fetching films:", error));
