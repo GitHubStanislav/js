@@ -92,7 +92,6 @@ body {
 
 document.head.appendChild(styles);
 
-// Display Star Wars animation
 filmsList.innerHTML = `
   <div class="star-wars">
     <div class="crawl">
@@ -107,7 +106,7 @@ filmsList.innerHTML = `
   </div>
 `;
 
-// Fetch the list of Star Wars films
+
 const filmsEndpoint = "https://ajax.test-danit.com/api/swapi/films";
 fetch(filmsEndpoint)
   .then((response) => response.json())
@@ -118,7 +117,6 @@ fetch(filmsEndpoint)
   background: #ffffff; }`;
       filmsList.innerHTML = ``;
 
-      // Display the list of films
       data.forEach(({ episodeId, name, openingCrawl, characters }) => {
         const filmInfo = document.createElement("div");
         filmInfo.innerHTML = `
@@ -127,7 +125,6 @@ fetch(filmsEndpoint)
             `;
         filmsList.appendChild(filmInfo);
 
-        // Fetch the characters for each film
         const charactersLoading = document.createElement("div");
         charactersLoading.textContent = "Loading characters...";
         filmInfo.appendChild(charactersLoading);
@@ -138,7 +135,6 @@ fetch(filmsEndpoint)
           )
         )
           .then((characters) => {
-            // Remove the characters loading element
             charactersLoading.remove();
 
             const charactersList = document.createElement("ul");
@@ -151,6 +147,6 @@ fetch(filmsEndpoint)
           })
           .catch((error) => console.log("Error fetching characters:", error));
       });
-    }, 4000);
+    }, 2000);
   })
   .catch((error) => console.log("Error fetching films:", error));
