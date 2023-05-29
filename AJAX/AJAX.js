@@ -106,7 +106,6 @@ filmsList.innerHTML = `
   </div>
 `;
 
-
 const filmsEndpoint = "https://ajax.test-danit.com/api/swapi/films";
 fetch(filmsEndpoint)
   .then((response) => response.json())
