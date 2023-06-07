@@ -1,13 +1,13 @@
 function getUsers() {
   return fetch("https://ajax.test-danit.com/api/json/users")
-    .then((response) => response.json())
-    .then((data) => data);
+      .then((response) => response.json())
+      .then((data) => data);
 }
 
 function getPosts() {
   return fetch("https://ajax.test-danit.com/api/json/posts")
-    .then((response) => response.json())
-    .then((data) => data);
+      .then((response) => response.json())
+      .then((data) => data);
 }
 
 function displayPosts(posts, users) {
@@ -16,7 +16,7 @@ function displayPosts(posts, users) {
   posts.forEach((post) => {
     const user = users.find((user) => user.id === post.userId);
     const card = createCard(post, user);
-    cardsContainer.appendChild(card);
+    cardsContainer.prepend(card); // Додано prepend для додавання публікацій зверху
   });
 }
 
@@ -49,7 +49,7 @@ function createCard(post, user) {
   editBtn.className = "edit-btn";
   editBtn.textContent = "Edit";
   editBtn.addEventListener("click", () =>
-    openEditModal(post.id, post.title, post.body)
+      openEditModal(post.id, post.title, post.body)
   );
 
   userInfo.appendChild(name);
@@ -99,15 +99,18 @@ function createPost(title, body) {
     },
     body: JSON.stringify(post),
   })
-    .then((response) => response.json())
-    .then((newPost) => {
-      const cardsContainer = document.getElementById("cardsContainer");
-      const users = JSON.parse(localStorage.getItem("users"));
-      const user = users.find((user) => user.id === newPost.userId);
-      const card = createCard(newPost, user);
-      cardsContainer.prepend(card);
-      closeCreateModal();
-    });
+      .then((response) => response.json())
+      .then((newPost) => {
+        const users = JSON.parse(localStorage.getItem("users"));
+        const user = users.find((user) => user.id === newPost.userId);
+        const card = createCard(newPost, user);
+        const cardsContainer = document.getElementById("cardsContainer");
+        cardsContainer.prepend(card);
+        closeCreateModal();
+      })
+      .catch((error) => {
+        console.log("Error creating post:", error);
+      });
 }
 
 function openEditModal(postId, title, body) {
@@ -117,20 +120,21 @@ function openEditModal(postId, title, body) {
 
   editTitleInput.value = title;
   editBodyInput.value = body;
+  modal.setAttribute("data-post-id", postId); // Додано атрибут з id публікації
 
   modal.style.display = "block";
-
-  // Додати обробник події для кнопки "Update" у модальному вікні
-  document.getElementById("updateBtn").addEventListener("click", () => {
-    const updatedTitle = editTitleInput.value;
-    const updatedBody = editBodyInput.value;
-    updatePost(postId, updatedTitle, updatedBody);
-  });
 }
 
 function closeEditModal() {
   const modal = document.getElementById("editModal");
   modal.style.display = "none";
+}
+
+function handleUpdate() {
+  const postId = document.getElementById("editModal").getAttribute("data-post-id");
+  const updatedTitle = document.getElementById("editPostTitle").value;
+  const updatedBody = document.getElementById("editPostBody").value;
+  updatePost(postId, updatedTitle, updatedBody);
 }
 
 function updatePost(postId, updatedTitle, updatedBody) {
@@ -146,17 +150,20 @@ function updatePost(postId, updatedTitle, updatedBody) {
     },
     body: JSON.stringify(post),
   })
-    .then((response) => response.json())
-    .then((updatedPost) => {
-      const card = document.querySelector(`.card[data-post-id="${postId}"]`);
-      if (card) {
-        const header = card.querySelector("h3");
-        const text = card.querySelector("p");
-        header.textContent = updatedPost.title;
-        text.textContent = updatedPost.body;
-      }
-      closeEditModal();
-    });
+      .then((response) => response.json())
+      .then((updatedPost) => {
+        const card = document.querySelector(`.card[data-post-id="${postId}"]`);
+        if (card) {
+          const header = card.querySelector("h3");
+          const text = card.querySelector("p");
+          header.textContent = updatedPost.title;
+          text.textContent = updatedPost.body;
+        }
+        closeEditModal();
+      })
+      .catch((error) => {
+        console.log("Error updating post:", error);
+      });
 }
 
 Promise.all([getUsers(), getPosts()]).then(([users, posts]) => {
@@ -165,13 +172,8 @@ Promise.all([getUsers(), getPosts()]).then(([users, posts]) => {
   document.getElementById("loader").style.display = "none";
 });
 
-document
-  .getElementById("addPostBtn")
-  .addEventListener("click", openCreateModal);
-
-document
-  .getElementById("createClose")
-  .addEventListener("click", closeCreateModal);
+document.getElementById("addPostBtn").addEventListener("click", openCreateModal);
+document.getElementById("createClose").addEventListener("click", closeCreateModal);
 document.getElementById("createBtn").addEventListener("click", () => {
   const title = document.getElementById("postTitle").value;
   const body = document.getElementById("postBody").value;
@@ -179,3 +181,4 @@ document.getElementById("createBtn").addEventListener("click", () => {
 });
 
 document.getElementById("editClose").addEventListener("click", closeEditModal);
+document.getElementById("updateBtn").addEventListener("click", handleUpdate);
