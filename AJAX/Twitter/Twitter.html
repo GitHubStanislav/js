@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Posts App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="loader">
+      <div class="loader-icon"></div>
+    </div>
+
+    <button id="addPostBtn">Додати публікацію</button>
+
+    <div id="cardsContainer">
+      <!-- Карти публікацій будуть додаватись тут -->
+    </div>
+
+
+
+    <!-- Модальне вікно для створення публікації -->
+    <div id="createModal" class="modal">
+      <div class="modal-content">
+        <span id="createClose" class="close">&times;</span>
+        <h2>Create Post</h2>
+        <label for="postTitle">Title:</label>
+        <input type="text" id="postTitle" />
+        <label for="postBody">Body:</label>
+        <textarea id="postBody"></textarea>
+        <button id="createBtn">Create</button>
+      </div>
+    </div>
+
+    <!-- Модальне вікно для редагування публікації -->
+    <div id="editModal" class="modal">
+      <div class="modal-content">
+        <span id="editClose" class="close">&times;</span>
+        <h2>Edit Post</h2>
+        <label for="editPostTitle">Title:</label>
+        <input type="text" id="editPostTitle" />
+        <label for="editPostBody">Body:</label>
+        <textarea id="editPostBody"></textarea>
+        <button id="updateBtn" class="action-btn">Update</button>
+      </div>
+    </div>
+
+    <script src="TwitterScript.js"></script>
+  </body>
+</html>
