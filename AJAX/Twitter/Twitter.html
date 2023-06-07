@@ -6,19 +6,14 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <button id="addPostBtn">Додати публікацію</button>
+
     <div id="loader">
       <div class="loader-icon"></div>
     </div>
 
-    <button id="addPostBtn">Додати публікацію</button>
+    <div id="cardsContainer"></div>
 
-    <div id="cardsContainer">
-      <!-- Карти публікацій будуть додаватись тут -->
-    </div>
-
-
-
-    <!-- Модальне вікно для створення публікації -->
     <div id="createModal" class="modal">
       <div class="modal-content">
         <span id="createClose" class="close">&times;</span>
@@ -31,7 +26,6 @@
       </div>
     </div>
 
-    <!-- Модальне вікно для редагування публікації -->
     <div id="editModal" class="modal">
       <div class="modal-content">
         <span id="editClose" class="close">&times;</span>
