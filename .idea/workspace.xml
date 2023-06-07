@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="798d1620-4c1f-4e2b-a1dd-d46b0e5ee8c5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AJAX/Twitter/Twitter.html" beforeDir="false" afterPath="$PROJECT_DIR$/AJAX/Twitter/Twitter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AJAX/Twitter/TwitterScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/AJAX/Twitter/TwitterScript.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +110,7 @@
       <workItem from="1685348811544" duration="767000" />
       <workItem from="1685781458526" duration="177000" />
       <workItem from="1686067939622" duration="1675000" />
-      <workItem from="1686126342528" duration="2974000" />
+      <workItem from="1686126342528" duration="3985000" />
     </task>
     <servers />
   </component>
