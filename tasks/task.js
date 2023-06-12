@@ -34,3 +34,4 @@ function noOdds (values) {
 }
 
 console.log(noOdds(arr))
+
