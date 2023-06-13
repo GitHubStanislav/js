@@ -16,7 +16,7 @@ class VisitModal {
         this.createButton.addEventListener("click", this.createVisit.bind(this));
         this.doctorSelect.addEventListener("change", this.showDoctorFields.bind(this));
 
-        this.loadVisits(); // Завантажити карточки при завантаженні сторінки
+        this.loadVisits(); // Загрузить карточки при загрузке страницы
     }
 
     openModal() {
@@ -28,13 +28,13 @@ class VisitModal {
     }
 
     createVisit() {
-        // Отримати значення полів з форми
+        // Получить значения полей формы
         const visitPurposeInput = document.getElementById("visit-purpose-input");
         const visitDescriptionInput = document.getElementById("visit-description-input");
         const prioritySelect = document.getElementById("common-priority-select");
         const fullNameInput = document.getElementById("full-name-input");
 
-        // Перевірка на заповненість обов'язкових полів
+        // Проверка заполнения обязательных полей
         if (
             this.doctorSelect.value === "" ||
             visitPurposeInput.value === "" ||
@@ -42,11 +42,11 @@ class VisitModal {
             prioritySelect.value === "" ||
             fullNameInput.value === ""
         ) {
-            alert("Будь ласка, заповніть всі обов'язкові поля.");
+            alert("Please fill in all required fields.");
             return;
         }
 
-        // Створення об'єкту з даними візиту
+        // Создание объекта с данными визита
         const visitData = {
             doctor: this.doctorSelect.value,
             title: visitPurposeInput.value,
@@ -57,7 +57,7 @@ class VisitModal {
 
         const token = "5421f6d0-11a0-4b32-8b0e-2d5476a236a0";
 
-        // Відправити дані візиту на сервер
+        // Отправка данных визита на сервер
         fetch("https://ajax.test-danit.com/api/v2/cards", {
             method: "POST",
             headers: {
@@ -68,9 +68,9 @@ class VisitModal {
         })
             .then((response) => response.json())
             .then((response) => {
-                console.log(response); // Отримання відповіді від сервера
+                console.log(response); // Получение ответа от сервера
 
-                // Очистити поля форми
+                // Очистка полей формы
                 this.doctorSelect.value = "";
                 visitPurposeInput.value = "";
                 visitDescriptionInput.value = "";
@@ -79,7 +79,7 @@ class VisitModal {
 
                 this.closeModal();
 
-                // Створення карточки візиту на сторінці
+                // Создание карточки визита на странице
                 this.createVisitCard(response);
             })
             .catch((error) => {
@@ -88,52 +88,63 @@ class VisitModal {
     }
 
     createVisitCard(visit) {
-        // Створення HTML-елементу карточки візиту
+        // Создание HTML-элемента карточки визита
         const visitCard = document.createElement("div");
         visitCard.className = "visit-card";
         visitCard.innerHTML = `
-            <h3>${visit.title}</h3>
-            <p>${visit.description}</p>
-            <p>${visit.doctor}</p>
-            <p>${visit.priority}</p>
-            <p>${visit.fullName}</p>
-        `;
+      <h3>${visit.title}</h3>
+      <p>${visit.description}</p>
+      <p>${visit.doctor}</p>
+      <p>${visit.priority}</p>
+      <p>${visit.fullName}</p>
+    `;
 
-        // Додавання карточки в список
+        // Добавление карточки в список
         this.visitList.appendChild(visitCard);
 
-        // Збереження карточки в локальне сховище браузера
+        // Сохранение карточки в локальном хранилище браузера
         this.saveVisit(visitCard.outerHTML);
     }
 
     saveVisit(visitHTML) {
-        // Отримати збережені карточки з локального сховища
+        // Получение сохраненных карточек из локального хранилища
         const savedVisits = localStorage.getItem("visits") || "[]";
         const visits = JSON.parse(savedVisits);
 
-        // Додати нову карточку
+        // Добавление новой карточки
         visits.push(visitHTML);
 
-        // Зберегти карточки у локальному сховищі
+        // Сохранение карточек в локальном хранилище
         localStorage.setItem("visits", JSON.stringify(visits));
     }
 
     loadVisits() {
-        // Отримати збережені карточки з локального сховища
+        // Получение сохраненных карточек из локального хранилища
         const savedVisits = localStorage.getItem("visits") || "[]";
         const visits = JSON.parse(savedVisits);
 
-        // Додати карточки до списку на сторінці
+        // Добавление карточек в список на странице
         visits.forEach((visitHTML) => {
             const visitCard = document.createElement("div");
             visitCard.className = "visit-card";
             visitCard.innerHTML = visitHTML;
             this.visitList.appendChild(visitCard);
         });
+
+        // Проверка наличия сохраненных карточек и отображение сообщения, если их нет
+        if (visits.length === 0) {
+            this.displayNoItemsMessage();
+        }
+    }
+
+    displayNoItemsMessage() {
+        const noItemsMessage = document.createElement("p");
+        noItemsMessage.textContent = "No items have been added.";
+        this.visitList.appendChild(noItemsMessage);
     }
 
     showDoctorFields() {
-        // Перевірка вибраного лікаря і відображення відповідних полів
+        // Проверка выбранного врача и отображение соответствующих полей
         const selectedDoctor = this.doctorSelect.value;
 
         if (selectedDoctor === "Cardiologist") {
