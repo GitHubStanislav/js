@@ -1,47 +1,119 @@
 <!DOCTYPE html>
 <html lang="uk">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Мій веб-сайт</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-<div class="container">
-  <header>
-    <div class="logo">
-      <!-- Ваш логотип -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Создать визит</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <!-- Ваш логотип -->
+      </div>
+      <div class="header-buttons">
+        <button id="login-button">Увійти</button>
+      </div>
+    </header>
+    <section class="filter-form">
+      <form id="filter-form">
+        <label for="search-input">Пошук за заголовком/змістом:</label>
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Пошук за заголовком/змістом"
+        />
+        <label for="status-select">Статус:</label>
+        <select id="status-select">
+          <option value="">Статус</option>
+          <option value="Open">Відкрито</option>
+          <option value="Done">Виконано</option>
+        </select>
+        <label for="priority-select">Терміновість:</label>
+        <select id="priority-select">
+          <option value="">Терміновість</option>
+          <option value="High">Висока</option>
+          <option value="Normal">Звичайна</option>
+          <option value="Low">Низька</option>
+        </select>
+        <button type="submit">Застосувати</button>
+      </form>
+    </section>
+    <section class="visit-list">
+      <ul id="visit-list">
+        <!-- Тут будуть відображатися створені візити -->
+      </ul>
+    </section>
+    <button id="create-visit-button">Створити візит</button>
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <label for="doctor-select">Лікар:</label>
+        <select id="doctor-select">
+          <option value="">Лікар</option>
+          <option value="Cardiologist">Кардіолог</option>
+          <option value="Dentist">Стоматолог</option>
+          <option value="Therapist">Терапевт</option>
+        </select>
+        <div id="common-fields" class="doctor-fields">
+          <label for="visit-purpose-input">Мета візиту:</label>
+          <input
+            type="text"
+            id="visit-purpose-input"
+            placeholder="Мета візиту"
+          />
+          <label for="visit-description-input">Короткий опис візиту:</label>
+          <input
+            type="text"
+            id="visit-description-input"
+            placeholder="Короткий опис візиту"
+          />
+          <label for="common-priority-select">Терміновість:</label>
+          <select id="common-priority-select">
+            <option value="">Терміновість</option>
+            <option value="High">Висока</option>
+            <option value="Normal">Звичайна</option>
+            <option value="Low">Низька</option>
+          </select>
+          <label for="full-name-input">ПІБ:</label>
+          <input type="text" id="full-name-input" placeholder="ПІБ" />
+        </div>
+        <div id="cardiologist-fields" class="doctor-fields">
+          <label for="blood-pressure-input">Тиск:</label>
+          <input type="text" id="blood-pressure-input" placeholder="Тиск" />
+          <label for="body-mass-index-input">Індекс маси тіла:</label>
+          <input
+            type="text"
+            id="body-mass-index-input"
+            placeholder="Індекс маси тіла"
+          />
+          <label for="cardio-diseases-input"
+            >Перенесені захворювання серцево-судинної системи:</label
+          >
+          <input
+            type="text"
+            id="cardio-diseases-input"
+            placeholder="Перенесені захворювання серцево-судинної системи"
+          />
+          <label for="cardiologist-age-input">Вік:</label>
+          <input type="text" id="cardiologist-age-input" placeholder="Вік" />
+        </div>
+        <div id="dentist-fields" class="doctor-fields">
+          <label for="last-visit-date-input">Дата останнього візиту:</label>
+          <input
+            type="text"
+            id="last-visit-date-input"
+            placeholder="Дата останнього візиту"
+          />
+        </div>
+        <div id="therapist-fields" class="doctor-fields">
+          <label for="therapist-age-input">Вік:</label>
+          <input type="text" id="therapist-age-input" placeholder="Вік" />
+        </div>
+        <button id="create-button">Створити</button>
+        <button id="close-button">Закрити</button>
+      </div>
     </div>
-    <div class="header-buttons">
-      <button id="login-button">Увійти</button>
-    </div>
-  </header>
-  <section class="filter-form">
-    <form id="filter-form">
-      <label for="search-input">Пошук за заголовком/змістом:</label>
-      <input type="text" id="search-input" placeholder="Пошук за заголовком/змістом">
-      <label for="status-select">Статус:</label>
-      <select id="status-select">
-        <option value="">Статус</option>
-        <option value="Open">Відкрито</option>
-        <option value="Done">Виконано</option>
-      </select>
-      <label for="priority-select">Терміновість:</label>
-      <select id="priority-select">
-        <option value="">Терміновість</option>
-        <option value="High">Висока</option>
-        <option value="Normal">Звичайна</option>
-        <option value="Low">Низька</option>
-      </select>
-      <button type="submit">Застосувати</button>
-    </form>
-  </section>
-  <section class="visit-list">
-    <ul id="visit-list">
-      <!-- Тут будуть відображатися створені візити -->
-    </ul>
-  </section>
-</div>
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
