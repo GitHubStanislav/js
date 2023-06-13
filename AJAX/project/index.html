@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мій веб-сайт</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="logo">
+      <!-- Ваш логотип -->
+    </div>
+    <div class="header-buttons">
+      <button id="login-button">Увійти</button>
+    </div>
+  </header>
+  <section class="filter-form">
+    <form id="filter-form">
+      <label for="search-input">Пошук за заголовком/змістом:</label>
+      <input type="text" id="search-input" placeholder="Пошук за заголовком/змістом">
+      <label for="status-select">Статус:</label>
+      <select id="status-select">
+        <option value="">Статус</option>
+        <option value="Open">Відкрито</option>
+        <option value="Done">Виконано</option>
+      </select>
+      <label for="priority-select">Терміновість:</label>
+      <select id="priority-select">
+        <option value="">Терміновість</option>
+        <option value="High">Висока</option>
+        <option value="Normal">Звичайна</option>
+        <option value="Low">Низька</option>
+      </select>
+      <button type="submit">Застосувати</button>
+    </form>
+  </section>
+  <section class="visit-list">
+    <ul id="visit-list">
+      <!-- Тут будуть відображатися створені візити -->
+    </ul>
+  </section>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
