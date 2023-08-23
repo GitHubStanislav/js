@@ -4,7 +4,7 @@ function outer() {
     let a = 10;
     return function inner() {
         let sum = a + 10;
-        return sum;
+        return sum
     };
 }
 
